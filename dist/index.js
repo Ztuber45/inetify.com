@@ -5,7 +5,7 @@ let homeAnchor = document.querySelector("#home");
 let playlistAnchor = document.querySelector("#playlist");
 let musicasAnchor = document.querySelector("#musicas");
 const showIFrame = (src) => {
-    iframeDiv.style.height = "670px";
+    iframeDiv.style.height = "650px";
     iframeDiv.style.marginTop = "50px";
     iframeDiv.style.paddingTop = "10px";
     iframeDiv.style.visibility = "visible";

@@ -5,7 +5,7 @@ let playlistAnchor = document.querySelector<HTMLAnchorElement>("#playlist")!;
 let musicasAnchor = document.querySelector<HTMLAnchorElement>("#musicas")!;
 
 const showIFrame = (src: string): void => {
-    iframeDiv.style.height = "670px"
+    iframeDiv.style.height = "650px"
     iframeDiv.style.marginTop = "50px"
     iframeDiv.style.paddingTop = "10px"
     iframeDiv.style.visibility = "visible";
