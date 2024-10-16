@@ -50,8 +50,10 @@ onload = () => {
         title.className = song.songPath == currentSong.songPath ? "is-selected" : "";
         playlist.appendChild(title);
     });
-    progressBar.max = songAudio.duration.toString();
-    songDurationTime.textContent = formatDuration(songAudio.duration);
+    setTimeout(() => {
+        progressBar.max = songAudio.duration.toString();
+        songDurationTime.textContent = formatDuration(songAudio.duration);
+    }, 100);
 };
 let songsHistory = [currentSong];
 let isRandomModeActive = false;

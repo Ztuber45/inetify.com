@@ -5,8 +5,9 @@ let playlistAnchor = document.querySelector<HTMLAnchorElement>("#playlist")!;
 let musicasAnchor = document.querySelector<HTMLAnchorElement>("#musicas")!;
 
 const showIFrame = (src: string): void => {
-    iframeDiv.style.height = "700px"
+    iframeDiv.style.height = "670px"
     iframeDiv.style.marginTop = "50px"
+    iframeDiv.style.paddingTop = "10px"
     iframeDiv.style.visibility = "visible";
 
     iframeTag.src = src;
@@ -17,20 +18,14 @@ const hideIFrame = (): void => {
     iframeDiv.style.visibility = "hidden";
 }
 
-homeAnchor.addEventListener("click", (e) => {
-    e.preventDefault();
-
+homeAnchor.addEventListener("click", () => {
     hideIFrame();
 });
 
-playlistAnchor.addEventListener("click", (e) => {
-    e.preventDefault();
-
+playlistAnchor.addEventListener("click", () => {
     showIFrame("./html/playlist.html");
 });
 
-musicasAnchor.addEventListener("click", (e) => {
-    e.preventDefault();
-
+musicasAnchor.addEventListener("click", () => {
     showIFrame("./html/musicas.html");
 });

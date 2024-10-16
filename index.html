@@ -8,11 +8,11 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <style>
-        body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-        body {font-size:16px;}
-        .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-        .w3-half img:hover{opacity:1}
-        </style>
+            body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+            body {font-size:16px;}
+            .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+            .w3-half img:hover{opacity:1}
+            </style>
         <link rel="icon" href="img/logo.png">
     </head>
     <body>
@@ -20,7 +20,7 @@
         <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
             <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px;">Close Menu</a>
             <div class="w3-container">
-                <h1 id="home-title" class="w3-padding-64"><b>Inetify</b></h1>
+                <h1 class="w3-padding-64"><b>Inetify</b></h1>
             </div>
             <div class="w3-bar-block">
                 <a href="#home-title" onclick="w3_close()" id="home" class="w3-bar-item w3-button w3-hover-white">Home</a> 
@@ -48,7 +48,7 @@
         <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
             <!-- Header -->
-            <div class="w3-container" style="margin-top:80px" id="showcase">
+            <div id="home-title" class="w3-container" style="margin-top:80px">
                 <h1 class="w3-jumbo"><b>Inetify</b></h1>
                 <hr style="width:50px;border:5px solid #437008" class="w3-round">
             </div>
@@ -150,8 +150,9 @@
             </div>
 
             <footer id="footer">
-                <small><a href="https://www.inete.pt" id="ineteCopyRight">@INETE</a>
-                    &copy; copyright reserved</small>
+                <small>
+                    <a target="_blank" href="https://www.inete.pt" id="ineteCopyRight">@INETE</a> &copy; copyright reserved
+                </small>
             </footer>
             <!-- End page content -->
         </div>
@@ -159,24 +160,24 @@
         <script src="./src/slider.js"></script>
         <script src="./dist/index.js"></script>
         <script>
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
 
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
         </script>
     </body>
 </html>
